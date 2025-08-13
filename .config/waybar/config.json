@@ -1,0 +1,181 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "height": 20,
+  "spacing": 0,
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "clock",
+    "custom/vpn"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "network",
+    "battery"
+  ],
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "󰊠 ",
+      "empty": " ",
+      "active": "󰮯 ",
+      "urgent": "󰀨 ",
+      "persistent": "󰊠 "
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "sort-by": "id"
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "format-alt": "   {:%a, %d %b %Y} ",
+    "format": "   {:%I:%M %p} "
+  },
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-disconnected": "Disconnected ⚠ ",
+    "format-icons": [
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤥 ",
+      "󰤨 "
+    ],
+    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "format-ethernet": "{ifname}",
+    "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "nospacing": 1,
+    "interval": 5
+  },
+  "custom/vpn": {
+    "format": "{icon} {text}",
+    "format-icons": {
+      "connected": " ",
+      "disconnected": " "
+    },
+    "return-type": "json",
+    "interval": 10,
+    "exec": "/home/h3n/.config/waybar/vpn-status.sh",
+    "on-click": "/home/h3n/.config/waybar/vpn-menu.sh",
+    "tooltip": true,
+    "signal": 8,
+    "restart-interval": 0
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "nospacing": 1,
+    "tooltip-format": "Volume : {volume}%",
+    "format-muted": "󰝟 ",
+    "format-icons": {
+      "headphone": " ",
+      "default": [
+        "󰕿 ",
+        "󰖀 ",
+        "󰕾 "
+      ]
+    },
+    "on-click": "pavucontrol",
+    "scroll-step": 1
+  },
+  "custom/launcher": {
+    "format": " ",
+    "tooltip": false
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "interval": 5,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip": false
+  },
+  "mpd": {
+    "format": "{stateIcon} {title}",
+    "format-disconnected": " Disconnected",
+    "format-stopped": " Stopped",
+    "unknown-tag": "N/A",
+    "interval": 2,
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "on-click": "mpc toggle",
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "spotify": "",
+      "default": "🎵"
+    },
+    "dynamic-order": [
+      "title"
+    ],
+    "interval": 5,
+    "status-icons": {
+      "paused": "⏸"
+    },
+    "ignored-players": [
+      "librewolf",
+      "firefox"
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+🔑 Keymaps Esenciales por Categoría
+
+🌟 BÁSICOS FUNDAMENTALES
+<Space>        -- Leader key (tecla principal)
+<leader>qq     -- Salir de Neovim
+<C-s>          -- Guardar archivo (funciona en todos los modos)
+<Esc>          -- Limpiar búsqueda y salir de snippets
+
+📁 NAVEGACIÓN DE ARCHIVOS
+<leader><space> -- Buscar archivos (Telescope)
+<leader>ff      -- Buscar archivos
+<leader>fg      -- Buscar en contenido (live grep)
+<leader>fr      -- Archivos recientes
+<leader>fb      -- Buscar en buffers abiertos
+<leader>:       -- Comandos recientes
+<leader>fe      -- Explorador de archivos (Neo-tree)
+
+📂 GESTIÓN DE BUFFERS
+<S-h>          -- Buffer anterior
+<S-l>          -- Buffer siguiente
+[b             -- Buffer anterior (alternativo)
+]b             -- Buffer siguiente (alternativo)
+<leader>bd     -- Cerrar buffer actual
+<leader>bo     -- Cerrar otros buffers
+<leader>bb     -- Cambiar al último buffer
+<leader>`      -- Cambiar al último buffer (alternativo)
+
+🪟 GESTIÓN DE VENTANAS
+<C-h>          -- Ir a ventana izquierda
+<C-j>          -- Ir a ventana inferior
+<C-k>          -- Ir a ventana superior
+<C-l>          -- Ir a ventana derecha
+<leader>-      -- Dividir horizontalmente
+<leader>|      -- Dividir verticalmente
+<leader>wd     -- Cerrar ventana
+<C-Up>         -- Aumentar altura
+<C-Down>       -- Disminuir altura
+<C-Left>       -- Disminuir ancho
+<C-Right>      -- Aumentar ancho
+
+🔍 BÚSQUEDA Y NAVEGACIÓN RÁPIDA
+s              -- Flash jump (navegación rápida)
+S              -- Flash treesitter
+/              -- Búsqueda normal
+n              -- Siguiente resultado
+N              -- Resultado anterior
+<leader>sr     -- Buscar y reemplazar (Grug-far)
+
+💻 LSP Y CÓDIGO
+gd             -- Ir a definición
+gD             -- Ir a declaración
+gr             -- Referencias
+gi             -- Implementaciones
+K              -- Hover/documentación
+<leader>ca     -- Code actions
+<leader>cr     -- Rename
+<leader>cf     -- Format código
+<leader>cd     -- Diagnósticos de línea
+]d             -- Siguiente diagnóstico
+[d             -- Diagnóstico anterior
+]e             -- Siguiente error
+[e             -- Error anterior
+<leader>cs     -- Símbolos (Trouble)
+<leader>cS     -- LSP references (Trouble)
+
+🐍 ESPECÍFICOS PARA PYTHON
+<leader>rp     -- Ejecutar archivo Python
+<leader>rt     -- Ejecutar tests del archivo
+<leader>rT     -- Ejecutar todos los tests
+<leader>rv     -- Crear entorno virtual
+<leader>ri     -- Instalar requirements.txt
+<leader>rg     -- Generar requirements.txt
+<leader>co     -- Organizar imports
+<leader>cF     -- Fix all con ruff
+<leader>rb     -- Formatear con black
+<leader>rs     -- Ordenar imports con isort
+
+🔧 DIAGNÓSTICOS Y PROBLEMAS
+<leader>xx     -- Toggle diagnósticos (Trouble)
+<leader>xX     -- Diagnósticos del buffer actual
+<leader>xq     -- Quickfix list
+<leader>xl     -- Location list
+]q             -- Siguiente item en quickfix
+[q             -- Item anterior en Quickfix
+
+📝 TODO Y COMENTARIOS
+]t             -- Siguiente TODO comment
+[t             -- TODO comment anterior
+<leader>xt     -- Lista de TODOs (Trouble)
+<leader>st     -- Buscar TODOs (Telescope)
+gcc            -- Comentar/descomentar línea
+gc             -- Comentar selección (visual mode)
+gco            -- Añadir comentario debajo
+gcO            -- Añadir comentario arriba
+
+🎯 TERMINAL Y COMANDOS
+<leader>ft     -- Terminal flotante (root dir)
+<leader>fT     -- Terminal flotante (cwd)
+<C-/>          -- Terminal (toggle)
+<C-_>          -- Terminal (alternativo)
+
+🔄 SESIONES
+<leader>qs     -- Restaurar sesión
+<leader>qS     -- Seleccionar sesión
+<leader>ql     -- Restaurar última sesión
+<leader>qd     -- No guardar sesión actual
+
+⚙️ CONFIGURACIÓN Y HERRAMIENTAS
+<leader>l      -- Lazy (gestor de plugins)
+<leader>cm     -- Mason (gestor LSP)
+<leader>?      -- Ayuda de keymaps del buffer
+<leader>ur     -- Redraw/Limpiar
+
+🎨 UI Y TOGGLE
+<leader>uf     -- Toggle format automático
+<leader>ul     -- Toggle números de línea
+<leader>uL     -- Toggle números relativos
+<leader>uw     -- Toggle wrap
+<leader>us     -- Toggle spelling
+<leader>ud     -- Toggle diagnósticos
+<leader>uh     -- Toggle inlay hints (si disponible)
+
+📊 GIT
+<leader>gg     -- Lazygit (root dir)
+<leader>gG     -- Lazygit (cwd)
+<leader>gb     -- Git blame línea
+<leader>gB     -- Git browse
+]h             -- Siguiente hunk
+[h             -- Hunk anterior
+<leader>ghs    -- Stage hunk
+<leader>ghr    -- Reset hunk
+<leader>ghp    -- Preview hunk
+<leader>ghb    -- Blame línea completa

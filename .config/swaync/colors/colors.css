@@ -1,0 +1,34 @@
+/* Importar colores de pywal */
+@import url("/home/h3n/.cache/wal/colors.css");
+
+/* Variables adicionales para SwayNC basadas en pywal */
+* {
+  /* Colores principales */
+  --swaync-background: var(--background);
+  --swaync-foreground: var(--foreground);
+
+  /* Colores específicos para elementos */
+  --swaync-gray: var(--color8);
+  --swaync-red: var(--color1);
+  --swaync-green: var(--color2);
+  --swaync-yellow: var(--color3);
+  --swaync-blue: var(--color4);
+  --swaync-magenta: var(--color5);
+  --swaync-cyan: var(--color6);
+  --swaync-white: var(--color7);
+
+  /* Colores brillantes */
+  --swaync-bright-red: var(--color9);
+  --swaync-bright-green: var(--color10);
+  --swaync-bright-yellow: var(--color11);
+  --swaync-bright-blue: var(--color12);
+  --swaync-bright-magenta: var(--color13);
+  --swaync-bright-cyan: var(--color14);
+  --swaync-bright-white: var(--color15);
+
+  /* Colores derivados para la interfaz */
+  --swaync-select: color-mix(in srgb, var(--color4) 30%, transparent);
+  --swaync-accent: var(--color5);
+  --swaync-surface: color-mix(in srgb, var(--color0) 90%, transparent);
+  --swaync-overlay: color-mix(in srgb, var(--color8) 10%, transparent);
+}

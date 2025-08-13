@@ -1,0 +1,54 @@
+# Spicetify Theme con colores de pywal
+# Generado automáticamente el Mon Jul 28 10:27:19 PM -05 2025
+# Basado en wallpaper: /home/h3n/Rice/Wallpapers/imagen_152.png
+
+[pywal]
+# === COLORES PRINCIPALES DE SPICETIFY ===
+text               = ceccc9
+subtext            = ceccc9
+main               = 0A090C
+main-elevated      = 0A090C
+highlight          = 19181b
+highlight-elevated = 1e1d20
+sidebar            = 000002
+player             = 000000
+card               = 0A090C
+shadow             = 000000
+selected-row       = 908e8c
+button             = D5393F
+button-active      = 8C8B89
+button-disabled    = 908e8c
+tab-active         = 0A090C
+notification       = 0A090C
+notification-error = 961C2E
+equalizer          = 808080
+misc               = 141316
+
+# === COLORES EXTENDIDOS BASADOS EN PYWAL ===
+# Colores base de pywal adaptados
+crust              = 000000
+mantle             = 000000
+base               = 0A090C
+surface0           = 0A090C
+surface1           = 141316
+surface2           = 1e1d20
+overlay0           = 908e8c
+overlay1           = D5393F
+overlay2           = 8C8B89
+
+# === COLORES TEMÁTICOS ===
+# Adaptados desde la paleta de pywal
+rosewater          = ceccc9
+flamingo           = A7A39E
+pink               = A29D99
+maroon             = 961C2E
+red                = 961C2E
+peach              = 808080
+yellow             = 808080
+green              = D5393F
+teal               = A7A39E
+sapphire           = 8C8B89
+blue               = 8C8B89
+sky                = A7A39E
+mauve              = A29D99
+lavender           = ceccc9

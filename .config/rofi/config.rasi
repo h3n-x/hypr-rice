@@ -1,0 +1,306 @@
+// ~/.config/rofi/config.rasi
+
+// Importa los colores generados por pywal
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    // Modos activos
+    modes: [ "drun", "run", "window", "filebrowser" ];
+
+    // Configuración general
+    font: "Sans 10";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Window";
+    display-filebrowser: "Files";
+
+    // Habilita iconos donde sea posible
+    show-icons: true;
+
+    // Opciones de ventana
+    location: 0; // center
+    anchor:   0; // center
+    // fullscreen: false; // Descomentar si se prefiere ventana completa
+
+    // Opciones de listview
+    lines: 12;
+    // columns: 1; // Por defecto
+    // fixed-height: false; // Por defecto
+    // dynamic: true; // Por defecto
+
+    // Opciones de entrada
+    // disable-history: false; // Por defecto
+    // sort: false; // Por defecto
+
+    // Opciones de comportamiento
+    // cycle: true; // Por defecto
+    // sidebar-mode: false; // Por defecto
+}
+
+// Aplica el tema oscuro de pywal y sobreescribe propiedades específicas
+* {
+    // Los colores se heredan del archivo importado
+    background-color: @background;
+    text-color: @foreground;
+}
+
+// Estilo de la ventana principal
+window {
+    // Usa las variables de color importadas
+    background-color: @background;
+    text-color: @foreground;
+    border-color: @color8; // Usar un color de acento más suave para el borde
+
+    // Dimensiones y posición
+    width: 800px; // Ancho fijo en píxeles
+    // height: 400px; // Altura fija (opcional, se puede dejar dinámica)
+
+    // Espaciado y bordes
+    padding: 16px; // Espacio interno alrededor del contenido
+    margin: 0px; // Margen externo (generalmente 0 para ventana principal)
+    border-radius: 12px; // Esquinas redondeadas
+
+    // Transparencia (si tu compositor lo soporta)
+    // transparency: "real"; // Opciones: "real", "background", "screenshot"
+    // Para compatibilidad, es mejor no depender de la transparencia real si no es estrictamente necesario
+
+    // Fuente (heredada de la configuración global, pero se puede sobrescribir)
+    // font: "Sans 10"; // Comentado porque se define en 'configuration'
+
+    // Posición (heredada de la configuración global, pero se puede sobrescribir)
+    // location: 0; // center
+    // anchor: 0; // center
+    // x-offset: 0px; // Desplazamiento horizontal
+    // y-offset: 0px; // Desplazamiento vertical
+}
+
+// Barra de entrada (donde se escribe el filtro)
+inputbar {
+    // Colores
+    background-color: @background; // Fondo ligeramente diferente
+    text-color: @text; // Color del texto introducido
+    border-color: @color8; // Color del borde
+
+    // Espaciado y bordes
+    padding: 10px 16px; // Espacio interno
+    margin: 0px 0px 16px 0px; // Margen inferior para separar del listview
+    border-radius: 8px; // Esquinas ligeramente redondeadas
+
+    // Orientación de los elementos hijos (prompt, entry, etc.)
+    orientation: horizontal;
+    spacing: 8px; // Espacio entre elementos (prompt, entrada, indicadores)
+    children: [ prompt, entry, case-indicator ]; // Orden de los elementos
+}
+
+// Texto del prompt (por ejemplo, "Buscar:")
+prompt {
+    // Colores
+    background-color: @background; // Hereda del inputbar
+    text-color: @accent; // Usa el color de acento para el prompt
+
+    // Fuente y alineación (opcional)
+    // font: "Sans Bold 10"; // Fuente específica para el prompt
+    // horizontal-align: 0; // Alineación a la izquierda (0), centro (0.5), derecha (1)
+    // vertical-align: 0.5; // Alineación vertical al centro
+
+    // Espaciado
+    padding: 2px 4px; // Relleno interno pequeño
+}
+
+// Campo de entrada de texto
+entry {
+    // Colores
+    background-color: @background; // Hereda del inputbar
+    text-color: @text; // Color del texto introducido
+
+    // Espaciado
+    padding: 2px 4px; // Relleno interno pequeño
+
+    // Placeholder (texto que aparece cuando está vacío)
+    placeholder: "Type to filter..."; // Texto de ayuda
+    placeholder-color: @text-alt; // Color del texto de ayuda
+
+    // Cursor
+    cursor-color: @text; // Color del cursor
+    cursor-width: 2px; // Ancho del cursor
+    // hide-cursor-on-empty: false; // Mostrar el cursor incluso si está vacío
+
+    // Expandir para llenar el espacio disponible
+    expand: true;
+}
+
+// Indicador de estado (mayúsculas, orden, etc.)
+case-indicator {
+    // Colores
+    background-color: @background; // Hereda del inputbar
+    text-color: @urgent; // Usa el color urgente para el indicador
+
+    // Espaciado
+    padding: 2px 4px; // Relleno interno pequeño
+}
+
+// Vista de lista donde se muestran las opciones
+listview {
+    // Colores (se aplican a las filas no seleccionadas)
+    background-color: @background; // Fondo
+    text-color: @foreground; // Color de texto por defecto
+    border-color: @background; // Color de las líneas separadoras
+
+    // Espaciado y bordes
+    padding: 0px; // Generalmente sin relleno interno
+    margin: 0px; // Sin margen
+    border: 0px solid; // Sin borde
+
+    // Configuración de columnas y filas
+    columns: 1; // Una sola columna
+    lines: 12; // Número de filas visibles (coincide con configuration)
+    // layout: vertical; // Diseño vertical (por defecto)
+    spacing: 4px; // Espacio entre filas
+    // cycle: true; // Permite el desplazamiento cíclico (por defecto)
+
+    // Scrollbar
+    scrollbar: true; // Mostrar scrollbar si es necesario
+    scrollbar-width: 8px; // Ancho del scrollbar
+}
+
+// Elemento individual dentro del listview (cada fila/opción)
+element {
+    // Colores y estilo por defecto (estado 'normal')
+    background-color: @background; // Fondo
+    text-color: @foreground; // Color de texto
+
+    // Espaciado y bordes
+    padding: 12px; // Relleno interno de cada fila
+    margin: 0px; // Sin margen
+    border: 0px solid; // Sin borde por defecto
+    border-radius: 8px; // Esquinas ligeramente redondeadas
+
+    // Orientación de los elementos hijos (icono, texto)
+    orientation: horizontal;
+    spacing: 12px; // Espacio entre icono y texto
+    children: [ element-icon, element-text ]; // Orden de los elementos hijos
+
+    // Expandir para llenar el ancho disponible
+    expand: true;
+}
+
+// Estado: cuando el mouse pasa por encima o se navega con teclas
+element selected {
+    // Colores cuando está seleccionado
+    background-color: @background; // Fondo del elemento seleccionado
+    text-color: @color2; // Color de texto del elemento seleccionado (invertido)
+}
+
+// Icono dentro de un elemento
+element-icon {
+    // Tamaño del icono
+    size: 24px; // Tamaño fijo en píxeles
+
+    // Alineación vertical (centrado)
+    vertical-align: 0.5;
+
+    // Expandir (generalmente no es necesario para iconos)
+    expand: false;
+}
+
+// Texto dentro de un elemento
+element-text {
+    // Colores (heredados o sobrescritos)
+    text-color: inherit; // Hereda del elemento
+
+    // Alineación vertical (centrado)
+    vertical-align: 0.5;
+
+    // Expandir para llenar el espacio disponible
+    expand: true;
+
+    // Resaltar texto coincidente (estilo de búsqueda)
+    // highlight: bold @accent; // Ejemplo: texto coincidente en negrita y color de acento
+    // Para desactivar el resaltado:
+    highlight: @background; // O simplemente no definir la propiedad
+}
+
+// Switcher de modos (botones en la parte inferior para cambiar entre drun, run, etc.)
+mode-switcher {
+    // Espaciado
+    padding: 8px 0px 0px 0px; // Margen superior para separar del listview
+    spacing: 16px; // Espacio entre botones
+    margin: 0px; // Sin margen externo
+
+    // Orientación
+    orientation: horizontal;
+}
+
+// Botón individual dentro del mode-switcher
+button {
+    // Colores por defecto
+    background-color: @background; // Fondo del botón
+    text-color: @foreground; // Color del texto del botón
+    border-color: @border; // Color del borde
+
+    // Espaciado y bordes
+    padding: 6px 12px; // Relleno interno del botón
+    margin: 0px; // Sin margen
+    border-radius: 8px; // Esquinas redondeadas
+
+    // Expandir (generalmente no, tienen tamaño fijo basado en contenido)
+    expand: false;
+}
+
+// Estado: botón seleccionado/activo
+button selected {
+    // Colores cuando el botón está activo
+    background-color: @background; // Fondo del botón activo
+    text-color: @background; // Color del texto del botón activo (invertido)
+    border-color: @active; // Borde del botón activo
+}
+
+// Mensaje (usado por -mesg en dmenu, o para errores)
+message {
+    // Espaciado
+    padding: 16px; // Relleno interno
+    margin: 0px 0px 16px 0px; // Margen inferior para separar del inputbar o listview
+
+    // Bordes (opcional)
+    border-radius: 8px;
+
+    // Colores
+    background-color: @background;
+}
+
+// Texto dentro del mensaje
+textbox {
+    // Colores
+    text-color: @foreground;
+
+    // Expandir
+    expand: true;
+
+    // Espaciado
+    padding: 4px;
+}
+
+// Widget de desplazamiento (scrollbar handle)
+scrollbar {
+    // Ancho del scrollbar (definido en listview, pero se puede ajustar)
+    // handle-width: 8px; // Definido en listview.scrollbar-width
+
+    // Colores
+    background-color: @background; // Fondo del área del scrollbar
+    handle-color: @color8; // Color del "handle" (la barra que se mueve)
+    border-color: @border; // Color del borde del área del scrollbar
+
+    // Bordes del handle
+    // handle-rounded-corners: true; // Opcional, si se desea esquinas redondeadas en el handle
+}
+
+// Widget overlay (mensajes temporales, como errores)
+overlay {
+    // Colores
+    background-color: rgba(0, 0, 0, 0.8); // Fondo semitransparente
+    text-color: @foreground; // Color del texto
+
+    // Espaciado
+    padding: 10px;
+    border-radius: 8px;
+}

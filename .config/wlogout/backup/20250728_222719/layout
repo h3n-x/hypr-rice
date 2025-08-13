@@ -1,0 +1,37 @@
+{
+  "label" : "lock",
+  "action" : "/home/h3n/.config/wlogout/scripts/confirm-dialog.sh 'Lock screen?' 'hyprlock'",
+  "text" : "Lock",
+  "keybind" : "l"
+},
+{
+  "label" : "hibernate",
+  "action" : "/home/h3n/.config/wlogout/scripts/confirm-dialog.sh 'Hibernate system?' 'systemctl hibernate'",
+  "text" : "Hibernate",
+  "keybind" : "h"
+},
+{
+  "label" : "logout",
+  "action" : "/home/h3n/.config/wlogout/scripts/confirm-dialog.sh 'Logout session?' 'hyprctl dispatch exit'",
+  "text" : "Logout",
+  "keybind" : "e"
+},
+{
+  "label" : "shutdown",
+  "action" : "/home/h3n/.config/wlogout/scripts/confirm-dialog.sh 'Shutdown system?' 'systemctl poweroff'",
+  "text" : "Shutdown",
+  "keybind" : "s"
+},
+{
+  "label" : "suspend",
+  "action" : "/home/h3n/.config/wlogout/scripts/confirm-dialog.sh 'Suspend system?' 'systemctl suspend'",
+  "text" : "Suspend",
+  "keybind" : "u"
+},
+{
+  "label" : "reboot",
+  "action" : "/home/h3n/.config/wlogout/scripts/confirm-dialog.sh 'Reboot system?' 'systemctl reboot'",
+  "text" : "Reboot",
+  "keybind" : "r"
+}
+

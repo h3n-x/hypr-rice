@@ -1,0 +1,126 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "cssPriority": "user",
+
+  "layer": "overlay",
+  "control-center-layer": "overlay",
+  "layer-shell": true,
+
+  "control-center-width": 420,
+  "control-center-height": 900,
+  "control-center-margin-top": 8,
+  "control-center-margin-bottom": 8,
+  "control-center-margin-right": 8,
+  "control-center-margin-left": 0,
+
+  "notification-window-width": 400,
+  "notification-icon-size": 48,
+  "notification-body-image-height": 180,
+  "notification-body-image-width": 200,
+
+  "timeout": 10,
+  "timeout-low": 8,
+  "timeout-critical": 0,
+
+  "fit-to-screen": true,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 250,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "text-empty": "Sin notificaciones",
+  "script-fail-notify": true,
+  "notification-2fa-action": true,
+  "notification-grouping": true,
+  "relative-timestamps": true,
+
+  "notification-visibility": {
+    "spotify-low": {
+      "state": "transient",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    },
+    "discord-muted": {
+      "state": "muted",
+      "app-name": "discord"
+    }
+  },
+
+  "widgets": ["mpris", "volume", "backlight", "title", "notifications"],
+
+  "widget-config": {
+    "title": {
+      "text": "Centro de Notificaciones",
+      "clear-all-button": true,
+      "button-text": "󰆴 Limpiar"
+    },
+    "dnd": {
+      "text": "No Molestar"
+    },
+    "mpris": {
+      "image-size": 64,
+      "image-radius": 12,
+      "blacklist": ["playerctld"],
+      "autohide": true,
+      "show-album-art": "when-available",
+      "loop-carousel": true
+    },
+    "volume": {
+      "label": "󰕾 ",
+      "expand-button-label": "󰅀",
+      "collapse-button-label": "󰅃",
+      "show-per-app": true,
+      "show-per-app-icon": true,
+      "show-per-app-label": false,
+      "empty-list-label": "Sin aplicaciones de audio activas",
+      "animation-type": "slide_down",
+      "animation-duration": 200
+    },
+    "backlight": {
+      "label": "󰃟 ",
+      "device": "amdgpu_bl1",
+      "subsystem": "backlight",
+      "min": 1,
+      "max": 100,
+      "step": 5,
+      "show-percentage": true
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰍬",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pactl set-source-mute @DEFAULT_SOURCE@ 1 || pactl set-source-mute @DEFAULT_SOURCE@ 0'",
+          "update-command": "sh -c '[[ $(pactl get-source-mute @DEFAULT_SOURCE@) == *yes* ]] && echo true || echo false'"
+        },
+        {
+          "label": "󰖁",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pactl set-sink-mute @DEFAULT_SINK@ 1 || pactl set-sink-mute @DEFAULT_SINK@ 0'",
+          "update-command": "sh -c '[[ $(pactl get-sink-mute @DEFAULT_SINK@) == *yes* ]] && echo true || echo false'"
+        }
+      ]
+    }
+  },
+
+  "scripts": {
+    "screenshot-notify": {
+      "exec": "notify-send 'Screenshot' 'Captura guardada en ~/Pictures/Screenshots/' -i camera-photo",
+      "app-name": "grim"
+    },
+    "volume-change": {
+      "exec": "~/.config/swaync/scripts/volume-notify.sh",
+      "summary": "Volume.*",
+      "urgency": "Low"
+    },
+    "brightness-change": {
+      "exec": "~/.config/swaync/scripts/brightness-notify.sh",
+      "summary": "Brightness.*",
+      "urgency": "Low"
+    }
+  }
+}

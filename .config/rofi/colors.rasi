@@ -1,0 +1,16 @@
+/* Colores generados por pywal para rofi */
+* {
+    background:     #0d0221ff;
+    background-alt: #0d0221ff;
+    foreground:     #de78f5ff;
+    selected:       #5A04A7ff;
+    active:         #3706CCff;
+    urgent:         #7007CFff;
+    
+    /* Colores adicionales */
+    accent:         #8504B9ff;
+    highlight:      #8D02D5ff;
+    border:         #AC02ECff;
+    text:           #de78f5ff;
+    text-alt:       #9b54abff;
+}

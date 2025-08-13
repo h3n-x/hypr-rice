@@ -1,0 +1,297 @@
+// ~/.config/rofi/config.rasi
+// Configuración mejorada para mejor previsualización de wallpapers
+
+// Importa los colores generados por pywal
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    // Modos activos
+    modes: [ "drun", "run", "window", "filebrowser" ];
+    
+    // Configuración general
+    font: "Sans 11";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Window";
+    display-filebrowser: "Files";
+    
+    // Habilita iconos donde sea posible
+    show-icons: true;
+    
+    // Opciones de ventana
+    location: 0; // center
+    anchor: 0; // center
+    
+    // Opciones de listview - REDUCIDO para imágenes más grandes
+    lines: 8; // Reducido de 12 a 8 para dar más espacio a cada elemento
+    
+    // Opciones de comportamiento
+    cycle: true;
+    disable-history: false;
+    sort: false;
+}
+
+// Aplica el tema oscuro de pywal
+* {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+// Estilo de la ventana principal - AUMENTADO para acomodar imágenes grandes
+window {
+    background-color: @background;
+    text-color: @foreground;
+    border-color: @color8;
+    
+    // Dimensiones aumentadas para mejor visualización
+    width: 1000px; // Aumentado de 800px
+    height: 700px; // Altura fija para mejor control
+    
+    // Espaciado y bordes
+    padding: 20px; // Aumentado para más espacio
+    margin: 0px;
+    border-radius: 16px; // Esquinas más redondeadas
+    border: 2px solid;
+}
+
+// Barra de entrada
+inputbar {
+    background-color: @background;
+    text-color: @text;
+    border-color: @color8;
+    
+    // Espaciado aumentado
+    padding: 12px 20px;
+    margin: 0px 0px 20px 0px; // Más margen inferior
+    border-radius: 10px;
+    border: 1px solid;
+    
+    orientation: horizontal;
+    spacing: 10px;
+    children: [ prompt, entry, case-indicator ];
+}
+
+// Texto del prompt
+prompt {
+    background-color: @background;
+    text-color: @accent;
+    font: "Sans Bold 11";
+    padding: 4px 8px;
+}
+
+// Campo de entrada de texto
+entry {
+    background-color: @background;
+    text-color: @text;
+    padding: 4px 8px;
+    placeholder: "Buscar wallpaper...";
+    placeholder-color: @text-alt;
+    cursor-color: @text;
+    cursor-width: 2px;
+    expand: true;
+}
+
+// Indicador de estado
+case-indicator {
+    background-color: @background;
+    text-color: @urgent;
+    padding: 4px 8px;
+}
+
+// Vista de lista - OPTIMIZADA para imágenes grandes
+listview {
+    background-color: @background;
+    text-color: @foreground;
+    border-color: @background;
+    
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid;
+    
+    columns: 1;
+    lines: 8; // Menos líneas para más espacio por elemento
+    spacing: 8px; // Más espacio entre elementos
+    
+    scrollbar: true;
+    scrollbar-width: 10px;
+    
+    // Configuración específica para mejor visualización
+    cycle: true;
+    dynamic: true;
+    fixed-height: false;
+}
+
+// Elemento individual - REDISEÑADO para imágenes grandes
+element {
+    background-color: @background;
+    text-color: @color2;
+    
+    // Espaciado significativamente aumentado
+    padding: 16px; // Aumentado para acomodar iconos grandes
+    margin: 2px;
+    border: 1px solid;
+    border-radius: 12px;
+    
+    orientation: horizontal;
+    spacing: 20px; // Más espacio entre icono y texto
+    children: [ element-icon, element-text ];
+    
+    expand: true;
+}
+
+// Estado seleccionado con mejor contraste
+element selected {
+    text-color: @color2;
+    border-color: @background;
+    border: 2px solid;
+}
+
+// Estado hover
+element alternate {
+  text-color: @color2;
+}
+
+// Icono - SIGNIFICATIVAMENTE AUMENTADO
+element-icon {
+    size: 150px; // AUMENTADO de 24px a 80px para mejor previsualización
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    expand: false;
+    
+    // Bordes redondeados para los iconos
+    border-radius: 8px;
+    
+    // Sombra sutil para mejor definición
+    background-color: transparent;
+    text-color: @color2;
+}
+
+// Texto del elemento - AJUSTADO para iconos grandes
+element-text {
+    text-color: @color15;
+    vertical-align: 0.5;
+    expand: true;
+    
+    // Fuente ligeramente más grande para mejor legibilidad
+    font: "Sans 12";
+    
+    // Resaltado de búsqueda
+    highlight: @color2;
+    
+    // Margen para separar del icono grande
+    margin: 0px 0px 0px 10px;
+}
+
+// Switcher de modos
+mode-switcher {
+    padding: 12px 0px 0px 0px;
+    spacing: 20px;
+    margin: 0px;
+    orientation: horizontal;
+}
+
+// Botón individual
+button {
+    background-color: @background;
+    text-color: @color2;
+    border-color: @color8;
+    
+    padding: 8px 16px;
+    margin: 0px;
+    border-radius: 10px;
+    border: 1px solid;
+    expand: false;
+    
+    font: "Sans 10";
+}
+
+// Botón seleccionado
+button selected {
+    background-color: @background;
+    text-color: @color2;
+    border-color: @color2;
+    border: 2px solid;
+}
+
+// Mensaje
+message {
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+// Texto del mensaje
+textbox {
+    text-color: @color2;
+    expand: true;
+    padding: 6px;
+    font: "Sans 11";
+}
+
+// Scrollbar mejorada
+scrollbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    handle-color: @color8;
+    border-color: @border;
+    
+    handle-width: 10px;
+    border-radius: 5px;
+}
+
+// Overlay
+overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-color: @color2;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+// Configuraciones adicionales para mejor experiencia visual
+element normal.normal {
+    text-color: @color2;
+}
+
+element normal.urgent {
+    text-color: @color2;
+}
+
+element normal.active {
+    text-color: @color2;
+}
+
+element selected.normal {
+    text-color: @color2;
+}
+
+element selected.urgent {
+    text-color: @color2;
+}
+
+element selected.active {
+    text-color: @color2;
+}
+
+element alternate.normal {
+    text-color: @color2;
+}
+
+element alternate.urgent {
+    text-color: @color2;
+}
+
+element alternate.active {
+    text-color: @color2;
+}
+
+element-text.selected.normal {
+  text-color: @color2;
+}
+
+element-text.selected.active {
+  text-color: @color2;
+}
+
+element-text.selected.urgent {
+  text-color: @color2;
+}

@@ -1,0 +1,54 @@
+# Spicetify Theme con colores de pywal
+# Generado automáticamente el Mon Jul 28 10:43:09 PM -05 2025
+# Basado en wallpaper: /home/h3n/Rice/Wallpapers/imagen_009.png
+
+[pywal]
+# === COLORES PRINCIPALES DE SPICETIFY ===
+text               = dedeef
+subtext            = dedeef
+main               = 101010
+main-elevated      = 101010
+highlight          = 1f1f1f
+highlight-elevated = 242424
+sidebar            = 060606
+player             = 010101
+card               = 101010
+shadow             = 000000
+selected-row       = 9b9ba7
+button             = 619E9D
+button-active      = BDB4BA
+button-disabled    = 9b9ba7
+tab-active         = 101010
+notification       = 101010
+notification-error = 55679F
+equalizer          = 3FA5D2
+misc               = 1a1a1a
+
+# === COLORES EXTENDIDOS BASADOS EN PYWAL ===
+# Colores base de pywal adaptados
+crust              = 000000
+mantle             = 000000
+base               = 101010
+surface0           = 101010
+surface1           = 1a1a1a
+surface2           = 242424
+overlay0           = 9b9ba7
+overlay1           = 619E9D
+overlay2           = BDB4BA
+
+# === COLORES TEMÁTICOS ===
+# Adaptados desde la paleta de pywal
+rosewater          = dedeef
+flamingo           = E7DFD5
+pink               = A9E1D3
+maroon             = 55679F
+red                = 55679F
+peach              = 3FA5D2
+yellow             = 3FA5D2
+green              = 619E9D
+teal               = E7DFD5
+sapphire           = BDB4BA
+blue               = BDB4BA
+sky                = E7DFD5
+mauve              = A9E1D3
+lavender           = dedeef

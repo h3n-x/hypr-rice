@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Servicio systemd para monitoreo automático de sonidos hyprlock
+# Este archivo debe ir en ~/.config/systemd/user/hyprlock-sound-monitor.service
+
+cat > ~/.config/systemd/user/hyprlock-sound-monitor.service << 'EOF'
+[Unit]
+Description=Hyprlock Sound Monitor Service
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.config/hypr/scripts/hyprlock_sound_monitor.sh
+Restart=always
+RestartSec=5
+Environment=DISPLAY=%i
+Environment=WAYLAND_DISPLAY=wayland-1
+
+[Install]
+WantedBy=default.target
+EOF
+
+echo "✅ Archivo de servicio systemd creado"
+
+systemctl --user enable --now hyprlock-sound-monitor.service

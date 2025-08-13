@@ -1,0 +1,103 @@
+/* CSS personalizado para Spicetify con colores de pywal */
+/* Generado automáticamente el Thu Aug  7 06:38:01 PM -05 2025 */
+/* Wallpaper: /home/h3n/Rice/Wallpapers/imagen_161.png */
+
+/* === VARIABLES CSS PERSONALIZADAS === */
+:root {
+    --pywal-background: #020104;
+    --pywal-foreground: #d6a8e2;
+    --pywal-color0: #020104;
+    --pywal-color1: #3F2D81;
+    --pywal-color2: #4C3591;
+    --pywal-color3: #5B3CA1;
+    --pywal-color4: #5E48A5;
+    --pywal-color5: #7850C7;
+    --pywal-color6: #965ADD;
+    --pywal-color7: #d6a8e2;
+    --pywal-color8: #95759e;
+}
+
+/* === MEJORAS VISUALES PERSONALIZADAS === */
+
+/* Barra de progreso personalizada */
+.progress-bar {
+    background: linear-gradient(90deg, #3F2D81, #5E48A5) !important;
+    border-radius: 4px !important;
+}
+
+/* Botones con gradiente sutil */
+.Button--style-green, .Button--style-default {
+    background: linear-gradient(135deg, #4C3591, #5E48A5) !important;
+    border: 1px solid #3F2D81 !important;
+    transition: all 0.3s ease !important;
+}
+
+.Button--style-green:hover, .Button--style-default:hover {
+    background: linear-gradient(135deg, #5E48A5, #965ADD) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(63, 45, 129, 0.3) !important;
+}
+
+/* Sidebar con efecto glassmorphism */
+.Root__nav-bar {
+    background: rgba(2, 1, 4, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    border-right: 1px solid rgba(63, 45, 129, 0.2) !important;
+}
+
+/* Cards con sombra personalizada */
+.Card, .card {
+    background: #020104 !important;
+    border: 1px solid rgba(63, 45, 129, 0.1) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(2, 1, 4, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.Card:hover, .card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(63, 45, 129, 0.2) !important;
+}
+
+/* Player controls mejorados */
+.player-controls {
+    background: rgba(2, 1, 4, 0.9) !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+    margin: 4px !important;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #020104 !important;
+    border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4C3591, #5E48A5) !important;
+    border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5E48A5, #965ADD) !important;
+}
+
+/* Animaciones suaves para transiciones */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Efectos de hover mejorados */
+.main-trackList-rowSectionVariable:hover {
+    background: rgba(63, 45, 129, 0.1) !important;
+}
+
+/* Personalización del now playing */
+.Root__now-playing-bar {
+    background: linear-gradient(90deg, rgba(2, 1, 4, 0.95), rgba(2, 1, 4, 0.95)) !important;
+    border-top: 1px solid rgba(63, 45, 129, 0.2) !important;
+}

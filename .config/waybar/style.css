@@ -1,0 +1,351 @@
+@import "/home/h3n/.cache/wal/colors-waybar.css";
+
+* {
+  font-family:
+    Material Design Icons,
+    JetBrainsMono Nerd Font;
+  font-size: 16px;
+  font-weight: bolder;
+  color: @foreground; /* Updated color value */
+}
+
+window#waybar {
+  /* you can also GTK3 CSS functions! */
+  background-color: transparent;
+  border: 26px transparent;
+  opacity: 0.8;
+}
+
+window#waybar.hidden {
+  opacity: 0.9;
+}
+
+#window {
+  color: @background; /* Updated color value */
+}
+
+#clock,
+#tray,
+#mode,
+#custom-lock,
+#idle_inhibitor,
+#backlight,
+#pulseaudio,
+#mpd,
+#mpris,
+#custom-weather {
+  border-radius: 8px 8px 8px 8px;
+  background-color: @background; /* Updated background color value */
+}
+
+#backlight {
+  color: @foreground; /* Updated color value */
+  border-radius: 8px 8px 8px 8px;
+  background-color: @background; /* Updated background color value */
+}
+
+#backlight,
+#pulseaudio,
+#network {
+  font-size: 16px;
+  background-color: @background; /* Updated background color value */
+}
+
+@keyframes button_activate {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#workspaces button {
+  border: none;
+  color: @foreground; /* Updated color value */
+  font-weight: bolder;
+  padding: 3px;
+  background: transparent;
+  box-shadow: none;
+  background-color: @background; /* Updated background color value */
+  font-size: 16px;
+}
+
+#workspaces button.active {
+  color: @foreground; /* Updated color value */
+  animation: button_activate 0.2s ease-in-out;
+  background-color: @background; /* Updated background color value */
+  font-size: 16px;
+}
+
+#workspaces button.urgent {
+  color: @foreground; /* Updated color value */
+  background: radial-gradient(circle, #ffffff 20%, #ff0000 30%);
+  background-color: @background; /* Updated background color value */
+  font-size: 16px;
+}
+
+#workspaces button.persistent {
+  color: @foreground; /* Updated color value */
+  background-color: @background; /* Updated background color value */
+  font-size: 16px;
+}
+
+#workspaces button.active:hover,
+#workspaces button.urgent:hover {
+  background: inherit;
+  background-color: @background; /* Updated background color value */
+  font-size: 16px;
+}
+
+#workspaces,
+#custom-ibus,
+#clock,
+#backlight,
+#battery,
+#pulseaudio,
+#custom-launcher,
+#tray,
+#network,
+#mpd,
+#mpris {
+  padding: 0em 2em;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  font-size: 16px;
+  background-color: @background; /* Updated background color value */
+}
+
+#workspaces {
+  padding-right: 10px;
+  border-radius: 0px 8px 8px 0px;
+  margin-left: -10px;
+  background-color: @background; /* Updated background color value */
+  font-size: 16px;
+}
+
+#custom-launcher {
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: 5px;
+  font-size: 16px;
+  border-radius: 8px 0px 0px 8px;
+  color: @foreground; /* Updated color value */
+  background-color: @background; /* Updated background color value */
+}
+
+#pulseaudio {
+  color: @foreground; /* Updated color value */
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 16px;
+  border-radius: 6px 8px 8px 6px;
+  background-color: @background; /* Updated background color value */
+}
+
+#mpris {
+  color: @foreground; /* Updated color value */
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 16px;
+  border-radius: 6px 8px 8px 6px;
+  background-color: @background; /* Updated background color value */
+}
+
+#mpd {
+  color: @foreground; /* Updated color value */
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 16px;
+  border-radius: 6px 8px 8px 6px;
+  background-color: @background; /* Updated background color value */
+}
+
+#pulseaudio.muted {
+  color: @color5; /* Updated color value */
+  padding-left: 10px;
+  font-size: 16px;
+  border-radius: 6px 8px 8px 6px;
+  background-color: @background; /* Updated background color value */
+}
+
+#backlight {
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 8px 6px 6px 8px;
+  font-size: 16px;
+  background-color: @background; /* Updated background color value */
+}
+
+#network {
+  padding-left: 0.2em;
+  color: @foreground; /* Updated color value */
+  border-radius: 8px 6px 6px 8px;
+  padding-left: 12px;
+  padding-right: 14px;
+  font-size: 16px;
+  background-color: @background; /* Updated background color value */
+}
+
+#network.disconnected {
+  color: @color5; /* Updated color value */
+  background-color: @background; /* Updated background color value */
+}
+
+#custom-powermenu {
+  color: @foreground; /* Updated color value */
+  margin-left: -12px;
+  margin-right: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 0px 8px 8px 0px;
+  background-color: @background; /* Updated background color value */
+}
+
+#battery {
+  color: @foreground; /* Updated color value */
+  margin-left: 0px;
+  margin-right: 5px;
+  border-radius: 8px 8px 8px 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+  font-size: 16px;
+  background-color: @background; /* Updated background color value */
+}
+
+#battery.critical,
+#battery.warning,
+#battery.full,
+#battery.plugged {
+  color: @color2; /* Updated color value */
+  padding-left: 6px;
+  padding-right: 12px;
+  font-size: 16px;
+  background-color: @background; /* Updated background color value */
+}
+
+#battery.charging {
+  color: @color2; /* Updated color value */
+  font-size: 16px;
+  padding-right: 13px;
+  padding-left: 8px;
+  background-color: @background; /* Updated background color value */
+}
+
+#battery.full,
+#battery.plugged {
+  font-size: 16px;
+  padding-right: 10px;
+  color: @color2; /* Updated color value */
+  background-color: @background; /* Updated background color value */
+}
+
+@keyframes blink {
+  to {
+    background-color: @background; /* Updated background color value */
+    color: @foreground; /* Updated color value */
+  }
+}
+
+#battery.warning {
+  color: @color7; /* Updated color value */
+  background-color: @background; /* Updated background color value */
+}
+
+#battery.critical:not(.charging) {
+  color: @color9; /* Updated color value */
+  background-color: @background; /* Updated background color value */
+}
+
+#custom-lock {
+  color: @foreground; /* Updated color value */
+  padding: 0 15px 0 15px;
+  margin-left: 7px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  background-color: @background; /* Updated background color value */
+}
+
+#clock {
+  color: @foreground; /* Updated color value */
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 16px;
+  font-weight: bolder;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: @background; /* Updated background color value */
+}
+
+tooltip {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: @background; /* Updated background color value */
+  color: @foreground; /* Updated color value */
+}
+
+tooltip label {
+  padding: 5px;
+  background-color: @background; /* Updated background color value */
+  color: @foreground; /* Updated color value */
+}
+
+label:focus {
+  background-color: @background; /* Updated background color value */
+}
+
+#tray {
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border-radius: 8px 8px 8px 8px;
+  background-color: @background; /* Updated background color value */
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+  background-color: @background; /* Updated background color value */
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @background; /* Updated background color value */
+}
+
+#idle_inhibitor {
+  background-color: @background; /* Updated background color value */
+}
+
+#idle_inhibitor.activated {
+  background-color: @background; /* Updated background color value */
+  color: @color2; /* Updated color value */
+}
+
+/* Estilos para el módulo VPN personalizado - misma estética que network */
+#custom-vpn {
+  padding-left: 0.2em;
+  color: @foreground; /* Updated color value */
+  border-radius: 8px 6px 6px 8px;
+  padding-left: 12px;
+  padding-right: 14px;
+  font-size: 16px;
+  background-color: @background; /* Updated background color value */
+  padding: 0em 2em;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+
+#custom-vpn.disconnected {
+  color: @color14; /* Updated color value */
+  background-color: @background; /* Updated background color value */
+}

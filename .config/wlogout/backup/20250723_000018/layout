@@ -1,0 +1,41 @@
+# Layout de wlogout para Hyprland con pywal
+# Generado automáticamente el Tue Jul 22 11:59:43 PM -05 2025
+
+[
+    {
+        "label" : "lock",
+        "action" : "hyprlock",
+        "text" : "Lock",
+        "keybind" : "l"
+    },
+    {
+        "label" : "hibernate",
+        "action" : "systemctl hibernate",
+        "text" : "Hibernate",
+        "keybind" : "h"
+    },
+    {
+        "label" : "logout",
+        "action" : "hyprctl dispatch exit",
+        "text" : "Logout",
+        "keybind" : "e"
+    },
+    {
+        "label" : "shutdown",
+        "action" : "systemctl poweroff",
+        "text" : "Shutdown",
+        "keybind" : "s"
+    },
+    {
+        "label" : "suspend",
+        "action" : "systemctl suspend",
+        "text" : "Suspend",
+        "keybind" : "u"
+    },
+    {
+        "label" : "reboot",
+        "action" : "systemctl reboot",
+        "text" : "Reboot",
+        "keybind" : "r"
+    }
+]
