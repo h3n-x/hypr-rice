@@ -70,13 +70,13 @@
 
 | Componente | Preview |
 |------------|---------|
-| **Desktop** | ![Desktop](Deskt.png) |
-| **Terminal** | ![Kitty](Kitty.png) |
-| **Lock Screen** | ![Lock](lock.png) |
-| **Rofi** | ![Rofi](Rofi.png) |
-| **Notifications** | ![SwayNC](SwayNC.png) |
-| **Editor** | ![Vim](Vim.png) |
-| **Logout** | ![Wlogout](Wlogout.png) |
+| **Desktop** | ![Desktop](https://github.com/user-attachments/assets/65d38f86-e2b6-4b19-9cda-35ad997db4e1) |
+| **Terminal** | ![Kitty](https://github.com/user-attachments/assets/77bb252b-0b17-40b0-9e11-dabcfb99c7fd) |
+| **Lock Screen** | ![Lock](https://github.com/user-attachments/assets/524d6ae9-9edd-422e-978d-33f8640b9e5f) |
+| **Rofi** | ![Rofi](https://github.com/user-attachments/assets/f4c49b38-bead-4927-9217-2b6e9bcdf1ab) |
+| **Notifications** | ![SwayNC](https://github.com/user-attachments/assets/b0426902-e779-440b-b135-554ce29af81d) |
+| **Editor** | ![Vim](https://github.com/user-attachments/assets/aa7a5ff1-3451-44f5-91de-530ba431340b) |
+| **Logout** | ![Wlogout](https://github.com/user-attachments/assets/e0e13234-d9a2-4928-bea0-f4d216753297) |
 
 ## 📦 Dependencias
 
