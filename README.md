@@ -57,7 +57,7 @@
 - **JetBrains Mono**: Fuente con ligaduras y símbolos Nerd Font
 
 ### 🔔 **Notificaciones**
-- **Dunst**: Sistema de notificaciones personalizado
+- **SwayNC**: Sistema de notificaciones personalizado
 - **Iconos**: Soporte completo para iconos de aplicaciones
 - **Reglas**: Configuraciones específicas por aplicación
 
@@ -87,7 +87,7 @@
 hyprland               # Compositor Wayland
 hyprlock               # Locker nativo de Hyprland
 wlogout                # Menú de logout para Wayland
-dunst                  # Sistema de notificaciones
+swaync                  # Sistema de notificaciones
 rofi-wayland           # Launcher de aplicaciones
 
 # Terminal y shell
@@ -138,7 +138,7 @@ file                   # Identificador de tipos de archivo
 
 #### **Paquetes Oficiales (pacman)**
 ```bash
-sudo pacman -S hyprland hyprlock wlogout dunst rofi-wayland \
+sudo pacman -S hyprland hyprlock wlogout swaync rofi-wayland \
                kitty zsh python-pywal python-pillow firefox \
                neovim grim imagemagick file yarn npm
 ```
@@ -187,7 +187,7 @@ cd ~/
 
 ```bash
 # Instalar paquetes base
-sudo pacman -S hyprland hyprlock wlogout dunst rofi-wayland \
+sudo pacman -S hyprland hyprlock wlogout swaync rofi-wayland \
                kitty zsh python-pywal python-pillow firefox \
                neovim grim imagemagick file yarn npm
 
@@ -237,7 +237,6 @@ wal -i ~/Rice/Wallpapers/imagen_001.png
 
 # Aplicar temas a todas las aplicaciones
 ./update-kitty-colors.sh
-./update-dunst-colors.sh
 ./update-wlogout-colors.sh
 ./update-spicetify-colors.sh
 ./update-firefox-all.sh
@@ -260,7 +259,6 @@ wal -i ~/Rice/Wallpapers/imagen_001.png
 │   │   ├── 🖱️ update-hyprland-cursor.sh  # Generar cursor personalizado
 │   │   ├── 🎯 update-hyprland-config.sh  # Actualizar config Hyprland
 │   │   ├── 💻 update-kitty-colors.sh     # Actualizar colores Kitty
-│   │   ├── 🔔 update-dunst-colors.sh     # Actualizar colores Dunst
 │   │   ├── 🚪 update-wlogout-colors.sh   # Actualizar colores Wlogout
 │   │   ├── 🎵 update-spicetify-colors.sh # Actualizar colores Spotify
 │   │   ├── 🌐 update-firefox-colors.sh   # Actualizar colores Firefox
@@ -295,8 +293,8 @@ wal -i ~/Rice/Wallpapers/imagen_001.png
     │   └── scripts/                # Scripts auxiliares
     ├── kitty/
     │   └── kitty.conf              # Configuración terminal
-    ├── dunst/
-    │   └── dunstrc                 # Configuración notificaciones
+    ├── swaync/
+    │   └── config.json             # Configuración notificaciones
     ├── wlogout/
     │   ├── layout                  # Layout botones logout
     │   ├── style.css               # Estilos CSS
@@ -598,7 +596,7 @@ echo "✅ Todos los colores actualizados!"
 - Keybinds personalizados
 - Configuración de tabs y ventanas
 
-#### **Dunst Notifications**
+#### **SwayNC Notifications**
 
 **Configuración avanzada:**
 - Posición: Esquina superior derecha
@@ -907,7 +905,7 @@ wal -i ~/Rice/Wallpapers/imagen_001.png
 - **[Spicetify](https://spicetify.app/)** - Personalizador de Spotify
 - **[Firefox Cascade](https://github.com/andreasgrafen/cascade)** - Tema Firefox
 - **[Kitty](https://sw.kovidgoyal.net/kitty/)** - Terminal moderno
-- **[Dunst](https://dunst-project.org/)** - Sistema de notificaciones
+- **[SwayNC](https://github.com/ErikReider/SwayNotificationCenter)** - Sistema de notificaciones
 - **[Wlogout](https://github.com/ArtsyMacaw/wlogout)** - Menú de logout
 
 ### 🛠️ **Herramientas de Construcción**
